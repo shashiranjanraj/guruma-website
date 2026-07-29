@@ -22,13 +22,13 @@ export default function Donations() {
         </p>
         <div className="donation-grid">
           {[
-            { icon: "\u{1F35A}", amount: "₹501", name: "Anna Daan", desc: "Feeds 20 people at the ashram for one day — the most sacred of all gifts.", featured: false },
-            { icon: "\u{1F4D6}", amount: "₹2,100", name: "Vidya Daan", desc: "Sponsors one month’s education for a girl at Ananda Vidyapeeth — books, uniforms & meals.", featured: true },
-            { icon: "\u{1F404}", amount: "₹5,100", name: "Go Daan", desc: "Sponsors the care and feed of one cow in our Gaushala for a full year.", featured: false },
-            { icon: "\u{1F3E5}", amount: "₹11,000", name: "Aarogya Seva", desc: "Fully sponsors a free medical camp in a rural village, treating 100+ patients.", featured: false },
+            { icon: "fa-bowl-rice", amount: "₹501", name: "Anna Daan", desc: "Feeds 20 people at the ashram for one day — the most sacred of all gifts.", featured: false },
+            { icon: "fa-book-open", amount: "₹2,100", name: "Vidya Daan", desc: "Sponsors one month’s education for a girl at Ananda Vidyapeeth — books, uniforms & meals.", featured: true },
+            { icon: "fa-cow", amount: "₹5,100", name: "Go Daan", desc: "Sponsors the care and feed of one cow in our Gaushala for a full year.", featured: false },
+            { icon: "fa-hand-holding-medical", amount: "₹11,000", name: "Aarogya Seva", desc: "Fully sponsors a free medical camp in a rural village, treating 100+ patients.", featured: false },
           ].map((item) => (
             <div className={`donation-tile${item.featured ? " featured" : ""}`} key={item.name}>
-              <span className="donation-tile-icon">{item.icon}</span>
+              <span className="donation-tile-icon"><i className={`fas ${item.icon}`}></i></span>
               <div className="donation-tile-amount">{item.amount}</div>
               <div className="donation-tile-name">{item.name}</div>
               <div className="donation-tile-desc">{item.desc}</div>

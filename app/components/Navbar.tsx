@@ -12,7 +12,7 @@ export default function Navbar() {
       const y = window.scrollY;
       if (navRef.current) {
         navRef.current.style.transform =
-          y > lastY && y > 120 ? "translateY(-100%)" : "translateY(0)";
+          y > lastY && y > 120 ? "translateY(-150%)" : "translateY(0)";
       }
       lastY = y;
     };

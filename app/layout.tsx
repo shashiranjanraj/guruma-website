@@ -40,8 +40,58 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.sadhvijagratchetanagiri.org"),
   title: "Shri Shri 1008 Acharya Mahamandaleshwar Sadhvi Jagrit Chetana Giri",
-  description: "Shri Matrishakti Acharya Peeth Seva Trust · Haridwar -- Sadhvi, Vedantic Scholar, Bhakti Yoga & Seva",
+  description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover the teachings, Vedanta discourses, Bhakti Yoga Satsangs, and humanitarian initiatives led by Sadhvi Jagrat Chetana Giri in Dehradun, Uttarakhand.",
+  keywords: [
+    "Sadhvi Jagrit Chetana Giri",
+    "Sadhvi Jagrat Chetna Giri",
+    "Acharya Mahamandaleshwar",
+    "Shri Matrishakti Acharya Peeth Seva Trust",
+    "Vedanta Scholar",
+    "Giri Order",
+    "Sannyas Diksha",
+    "Swami Parmanand Giri Ji Maharaj",
+    "Ashram Dehradun",
+    "Sanskrit and Vedanta",
+    "Go Seva Gaushala",
+    "Ananda Vidyapeeth Gurukul",
+    "Spiritual Discourse",
+    "Bhakti Yoga Seva"
+  ],
+  openGraph: {
+    title: "Shri Shri 1008 Acharya Mahamandaleshwar Sadhvi Jagrit Chetana Giri",
+    description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover spiritual discourses, Vedanta classes, and charitable services.",
+    url: "https://www.sadhvijagratchetanagiri.org",
+    siteName: "Sadhvi Jagrit Chetana Giri",
+    images: [
+      {
+        url: "/images/hero-portrait.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sadhvi Jagrit Chetana Giri -- Portrait",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sadhvi Jagrit Chetana Giri",
+    description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover spiritual discourses and charitable services.",
+    images: ["/images/hero-portrait.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

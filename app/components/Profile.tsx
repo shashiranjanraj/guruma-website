@@ -70,7 +70,7 @@ export default function Profile() {
                   { name: "Indian Classical Music", desc: "Training in Indian Classical Music" },
                 ].map((item) => (
                   <div className="lineage-item" key={item.name}>
-                    <span className="lineage-icon">&#x1F393;</span>
+                    <span className="lineage-icon"><i className="fas fa-graduation-cap"></i></span>
                     <div>
                       <div className="lineage-name">{item.name}</div>
                       <div className="lineage-desc">{item.desc}</div>
@@ -90,7 +90,7 @@ export default function Profile() {
                   { name: "Bhagavad Gita", desc: "Deep study and discourse of the Shreemad Bhagavad Gita" },
                 ].map((item) => (
                   <div className="lineage-item" key={item.name}>
-                    <span className="lineage-icon">&#x1F4D6;</span>
+                    <span className="lineage-icon"><i className="fas fa-book-open"></i></span>
                     <div>
                       <div className="lineage-name">{item.name}</div>
                       <div className="lineage-desc">{item.desc}</div>
@@ -112,14 +112,14 @@ export default function Profile() {
               <p>The Guru-Shishya tradition holds immense significance in India. A Guru nurtures the soul of the disciple through a sacred spiritual bond. Just as sunlight enables us to see every object in the world, the light of <strong>Guru Tattva</strong> within our inner being resolves our sorrows and afflictions. We must offer ourselves with grateful devotion and surrender to our Guru — this is the true essence of the Guru-Shishya Parampara.</p>
               <div className="lineage-list">
                 <div className="lineage-item">
-                  <span className="lineage-icon">&#x1FAB7;</span>
+                  <span className="lineage-icon"><i className="fas fa-dharmachakra"></i></span>
                   <div>
                     <div className="lineage-name">Yugpurush Shree Swami Parmanand Giri Ji Maharaj</div>
                     <div className="lineage-desc">Gurudev · Haridwar · Revered Master of the Giri Order · Bestowed Sanyas Diksha at Simhastha Ujjain Mahakumbh, 12 May 2016</div>
                   </div>
                 </div>
                 <div className="lineage-item" style={{ borderLeftColor: "var(--primary, #E8821A)" }}>
-                  <span className="lineage-icon">&#x1FAB7;</span>
+                  <span className="lineage-icon"><i className="fas fa-hands-praying"></i></span>
                   <div>
                     <div className="lineage-name">Anant Shree 1008 Acharya Mahamandaleshwar Acharya Maa Jagrat Chetna Giri</div>
                     <div className="lineage-desc">President · Shri Matrishakti Acharya Peeth Seva Trust (Regd.) · Dehradun, Uttarakhand</div>

@@ -75,15 +75,19 @@ export default function Social() {
             </div>
             <div className="insta-grid-wrap">
               {[
-                { bg: "linear-gradient(135deg,#E8821A,#D4A017)", emoji: "\u{1FAB7}" },
-                { bg: "linear-gradient(135deg,#7B1C1C,#E8821A)", emoji: "\u{1F64F}" },
-                { bg: "linear-gradient(135deg,#1a6b1a,#4CAF50)", emoji: "\u{1F33F}" },
-                { bg: "linear-gradient(135deg,#1a1a6b,#6b1a6b)", emoji: "\u{1F549}️" },
-                { bg: "linear-gradient(135deg,#6b4a00,#E8821A)", emoji: "\u{1FA94}" },
-                { bg: "linear-gradient(135deg,#4a0E0E,#7B1C1C)", emoji: "\u{1F4FF}" },
+                { src: "/images/gallery-with-guru.jpg", likes: "4.8K", comments: "124" },
+                { src: "/images/gallery-ashram-smiling.jpg", likes: "6.2K", comments: "312" },
+                { src: "/images/slider-garden.jpg", likes: "3.5K", comments: "98" },
+                { src: "/images/slider-celebration.jpg", likes: "8.1K", comments: "442" },
+                { src: "/images/gallery-with-devotees.jpg", likes: "5.4K", comments: "287" },
+                { src: "/images/slider-with-ram.jpg", likes: "9.2K", comments: "518" },
               ].map((cell, i) => (
-                <div className="insta-cell" key={i} style={{ background: cell.bg }}>
-                  {cell.emoji}
+                <div className="insta-cell" key={i}>
+                  <img src={cell.src} alt="Instagram post" />
+                  <div className="insta-cell-overlay">
+                    <span><i className="fas fa-heart"></i> {cell.likes}</span>
+                    <span><i className="fas fa-comment"></i> {cell.comments}</span>
+                  </div>
                 </div>
               ))}
             </div>

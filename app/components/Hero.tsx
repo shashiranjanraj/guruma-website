@@ -3,11 +3,11 @@
 import { useState, useEffect, useCallback } from "react";
 
 const slides = [
-  { src: "/images/hero-portrait.jpg", alt: "Sadhvi Jagrit Chetana Giri -- Portrait" },
-  { src: "/images/slider-formal.jpg", alt: "At a Spiritual Event" },
-  { src: "/images/slider-with-ram.jpg", alt: "With Shri Ram" },
-  { src: "/images/slider-celebration.jpg", alt: "Celebration at the Ashram" },
-  { src: "/images/slider-garden.jpg", alt: "In the Garden" },
+  { src: "/images/hero-portrait.jpg", alt: "Sadhvi Jagrit Chetana Giri -- Portrait", position: "center 38%" },
+  { src: "/images/slider-formal.jpg", alt: "At a Spiritual Event", position: "center 50%" },
+  { src: "/images/slider-with-ram.jpg", alt: "With Shri Ram", position: "center 20%" },
+  { src: "/images/slider-celebration.jpg", alt: "Celebration at the Ashram", position: "center 55%" },
+  { src: "/images/slider-garden.jpg", alt: "In the Garden", position: "center 36%" },
 ];
 
 export default function Hero() {
@@ -42,6 +42,7 @@ export default function Hero() {
               src={slide.src}
               alt={slide.alt}
               draggable={false}
+              style={{ objectPosition: slide.position || "center 20%" }}
             />
           </div>
         ))}

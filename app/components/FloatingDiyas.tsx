@@ -17,7 +17,7 @@ export default function FloatingDiyas() {
     const items: Particle[] = Array.from({ length: 15 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      size: 3 + Math.random() * 4,
+      size: 5 + Math.random() * 7,
       duration: 15 + Math.random() * 20,
       delay: Math.random() * 15,
     }));
