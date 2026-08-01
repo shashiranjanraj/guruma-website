@@ -28,7 +28,7 @@ export default function Navbar() {
         <a href="#home" className="nav-brand">
           <div className="nav-om">&#x0950;</div>
           <div className="nav-brand-text">
-            <div className="nav-brand-title">Sadhvi Jagrit Chetana Giri</div>
+            <div className="nav-brand-title">Aacharya Maa Jagrat Chetna Giri</div>
             <div className="nav-brand-sub">Shri Matrishakti Acharya Peeth Seva Trust · Dehradun</div>
           </div>
         </a>

@@ -1,13 +1,35 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import SectionHeader from "./SectionHeader";
 
 export default function Contact() {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("🙏 Thank you for reaching out! Your message has been sent to Shri Matrishakti Acharya Peeth Seva Trust. We will get back to you soon. Hari Om!");
-    (e.target as HTMLFormElement).reset();
+    setStatus("sending");
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    formData.append("access_key", "f969606f-ebaf-43f8-ad9f-d694fa639639");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("sent");
+        form.reset();
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -50,35 +72,44 @@ export default function Contact() {
           <div className="contact-form-panel">
             <div className="contact-form-title">Send a Message</div>
             <form onSubmit={handleSubmit}>
+              <input type="hidden" name="subject" value="New message from Shri Matrishakti website" />
               <div className="form-field">
                 <label className="form-label">Your Name</label>
-                <input type="text" className="form-input" placeholder="Enter your full name" required />
+                <input type="text" name="name" className="form-input" placeholder="Enter your full name" required />
               </div>
               <div className="form-field">
                 <label className="form-label">Email Address</label>
-                <input type="email" className="form-input" placeholder="your@email.com" required />
+                <input type="email" name="email" className="form-input" placeholder="your@email.com" required />
               </div>
               <div className="form-field">
                 <label className="form-label">Phone Number</label>
-                <input type="tel" className="form-input" placeholder="+91 XXXXX XXXXX" />
+                <input type="tel" name="phone" className="form-input" placeholder="+91 XXXXX XXXXX" />
               </div>
               <div className="form-field">
                 <label className="form-label">Subject</label>
-                <select className="form-input" required defaultValue="">
+                <select name="topic" className="form-input" required defaultValue="">
                   <option value="" disabled>Select a subject</option>
-                  <option value="diksha">Diksha / Initiation Inquiry</option>
-                  <option value="satsang">Satsang / Program Schedule</option>
-                  <option value="donation">Donation Receipt Request</option>
-                  <option value="ashram">Ashram Visit / Accommodation</option>
-                  <option value="books">Books &amp; Publications</option>
-                  <option value="other">Other</option>
+                  <option value="Diksha / Initiation Inquiry">Diksha / Initiation Inquiry</option>
+                  <option value="Satsang / Program Schedule">Satsang / Program Schedule</option>
+                  <option value="Donation Receipt Request">Donation Receipt Request</option>
+                  <option value="Ashram Visit / Accommodation">Ashram Visit / Accommodation</option>
+                  <option value="Books & Publications">Books &amp; Publications</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div className="form-field">
                 <label className="form-label">Your Message</label>
-                <textarea className="form-input" placeholder="Jai Guru Maa! Please write your message here…" required></textarea>
+                <textarea name="message" className="form-input" placeholder="Jai Guru Maa! Please write your message here…" required></textarea>
               </div>
-              <button type="submit" className="form-submit-btn">🙏 &nbsp; Send Message</button>
+              <button type="submit" className="form-submit-btn" disabled={status === "sending"}>
+                {status === "sending" ? "Sending..." : status === "sent" ? "Message Sent!" : "Send Message"}
+              </button>
+              {status === "sent" && (
+                <div className="form-success-msg">Thank you! Your message has been sent to the Trust. Hari Om!</div>
+              )}
+              {status === "error" && (
+                <div className="form-error-msg">Something went wrong. Please try again or contact us directly.</div>
+              )}
             </form>
           </div>
         </div>

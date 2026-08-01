@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Profile from "./components/Profile";
 import Trust from "./components/Trust";
+import ShaktiPeeth from "./components/ShaktiPeeth";
+import Courses from "./components/Courses";
 import Donations from "./components/Donations";
 import Gallery from "./components/Gallery";
 import YouTube from "./components/YouTube";
@@ -19,6 +21,8 @@ export default function Home() {
       <Hero />
       <Profile />
       <Trust />
+      <ShaktiPeeth />
+      <Courses />
       <Donations />
       <Gallery />
       <YouTube />

@@ -2,7 +2,7 @@ import SectionHeader from "./SectionHeader";
 
 const videos = [
   { bg: "linear-gradient(135deg,#1a0533,#4a1060)", dur: "1:24:36", title: "Bhagavad Gita Chapter 12 — Bhakti Yoga: The Path of Devotion | Full Discourse", views: "458K views", ago: "3 weeks ago" },
-  { bg: "linear-gradient(135deg,#1a0a00,#6b2a00)", dur: "47:12", title: "Who Am I? Self-Inquiry Meditation — Guided by Sadhvi Ji | Atma Vichara", views: "312K views", ago: "1 month ago" },
+  { bg: "linear-gradient(135deg,#1a0a00,#6b2a00)", dur: "47:12", title: "Who Am I? Self-Inquiry Meditation — Guided by Aacharya Maa | Atma Vichara", views: "312K views", ago: "1 month ago" },
   { bg: "linear-gradient(135deg,#001a0a,#00452a)", dur: "2:10:45", title: "Navratri Special — Devi Mahatmya Recitation with Commentary | All 9 Days", views: "1.1M views", ago: "2 months ago" },
   { bg: "linear-gradient(135deg,#0a0a1a,#1a1a4a)", dur: "58:03", title: "Morning Sadhana Routine — How to Start Your Spiritual Practice | Step by Step", views: "589K views", ago: "5 months ago" },
   { bg: "linear-gradient(135deg,#1a001a,#4a004a)", dur: "35:20", title: "Guru Purnima Satsang LIVE 2023 — Significance & How to Honor Your Guru", views: "778K views", ago: "8 months ago" },
@@ -21,7 +21,7 @@ export default function YouTube() {
         <div className="yt-channel-strip">
           <i className="fab fa-youtube yt-icon"></i>
           <div>
-            <div className="yt-channel-name">Acharyaa Maa Sadhvi Jagrat Chetna Giri</div>
+            <div className="yt-channel-name">Aacharya Maa Jagrat Chetna Giri</div>
             <div className="yt-channel-meta">Satsang, Gita discourses &amp; guided meditation</div>
           </div>
           <a href="https://www.youtube.com/@SadhviJagratChetna-nq1rb" target="_blank" rel="noopener noreferrer" className="yt-sub-btn"><i className="fab fa-youtube"></i> Subscribe</a>

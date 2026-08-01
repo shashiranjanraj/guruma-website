@@ -40,12 +40,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.sadhvijagratchetanagiri.org"),
-  title: "Shri Shri 1008 Acharya Mahamandaleshwar Sadhvi Jagrit Chetana Giri",
-  description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover the teachings, Vedanta discourses, Bhakti Yoga Satsangs, and humanitarian initiatives led by Sadhvi Jagrat Chetana Giri in Dehradun, Uttarakhand.",
+  metadataBase: new URL("https://www.shrimatrishakti.com"),
+  title: "जय गुरुदेव",
+  description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover the teachings, Vedanta discourses, Bhakti Yoga Satsangs, and humanitarian initiatives led by Aacharya Maa Jagrat Chetna Giri in Dehradun, Uttarakhand.",
   keywords: [
-    "Sadhvi Jagrit Chetana Giri",
-    "Sadhvi Jagrat Chetna Giri",
+    "Aacharya Maa Jagrat Chetna Giri",
+    "Acharya Maa Jagrat Chetna Giri",
     "Acharya Mahamandaleshwar",
     "Shri Matrishakti Acharya Peeth Seva Trust",
     "Vedanta Scholar",
@@ -55,21 +55,20 @@ export const metadata: Metadata = {
     "Ashram Dehradun",
     "Sanskrit and Vedanta",
     "Go Seva Gaushala",
-    "Ananda Vidyapeeth Gurukul",
     "Spiritual Discourse",
     "Bhakti Yoga Seva"
   ],
   openGraph: {
-    title: "Shri Shri 1008 Acharya Mahamandaleshwar Sadhvi Jagrit Chetana Giri",
+    title: "जय गुरुदेव",
     description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover spiritual discourses, Vedanta classes, and charitable services.",
-    url: "https://www.sadhvijagratchetanagiri.org",
-    siteName: "Sadhvi Jagrit Chetana Giri",
+    url: "https://www.shrimatrishakti.com",
+    siteName: "Aacharya Maa Jagrat Chetna Giri",
     images: [
       {
         url: "/images/hero-portrait.jpg",
         width: 1200,
         height: 630,
-        alt: "Sadhvi Jagrit Chetana Giri -- Portrait",
+        alt: "Aacharya Maa Jagrat Chetna Giri -- Portrait",
       },
     ],
     locale: "en_IN",
@@ -77,7 +76,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sadhvi Jagrit Chetana Giri",
+    title: "Aacharya Maa Jagrat Chetna Giri",
     description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover spiritual discourses and charitable services.",
     images: ["/images/hero-portrait.jpg"],
   },

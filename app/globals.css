@@ -1210,51 +1210,343 @@ section {
 }
 
 /* Trust counters */
-.trust-counters {
+.trust-highlights {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-.trust-count-cell {
+.trust-highlight-cell {
   background: var(--bg-dark-card);
-  padding: 32px 20px;
+  padding: 28px 22px;
   text-align: center;
   border-radius: var(--radius-lg);
   transition: all var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.trust-count-cell:hover {
+.trust-highlight-cell:hover {
   background: var(--bg-dark-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.trust-count-num {
-  font-family: var(--font-cinzel), serif;
-  font-size: 2.2rem;
+.trust-highlight-icon {
+  font-size: 1.6rem;
   color: var(--primary-light);
-  font-weight: 700;
-  line-height: 1;
-  transition: all var(--transition);
+  margin-bottom: 14px;
+  transition: color var(--transition);
 }
 
-.trust-count-cell:hover .trust-count-num {
+.trust-highlight-cell:hover .trust-highlight-icon {
   color: var(--primary);
 }
 
-.trust-count-suffix {
-  font-size: 1.2rem;
+.trust-highlight-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
 }
 
-.trust-count-label {
+.trust-highlight-desc {
   font-family: var(--font-poppins), sans-serif;
-  font-size: 0.62rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  font-size: 0.72rem;
+  line-height: 1.6;
   color: var(--text-light-muted);
-  margin-top: 10px;
+}
+
+
+/* ================================================================
+   SHAKTI PEETH
+   ================================================================ */
+
+.shakti-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.shakti-content h3 {
+  font-family: var(--font-cinzel), serif;
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.shakti-content p {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-light-muted);
+  margin-bottom: 16px;
+}
+
+.shakti-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.shakti-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  background: var(--bg-dark-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all var(--transition);
+}
+
+.shakti-feature:hover {
+  background: var(--bg-dark-hover);
+  transform: translateY(-2px);
+}
+
+.shakti-feature-icon {
+  font-size: 1.3rem;
+  color: var(--primary-light);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.shakti-feature-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.shakti-feature-desc {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.72rem;
+  color: var(--text-light-muted);
+  line-height: 1.5;
+}
+
+.shakti-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.shakti-card-icon {
+  font-size: 2.4rem;
+  color: var(--primary-light);
+  margin-bottom: 18px;
+}
+
+.shakti-card-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.shakti-card-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+  margin: 0 auto 20px;
+}
+
+.shakti-card-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: left;
+}
+
+.shakti-card-detail:last-child {
+  border-bottom: none;
+}
+
+.shakti-card-detail i {
+  color: var(--primary-light);
+  font-size: 0.85rem;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.shakti-card-detail span {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-light-muted);
+  line-height: 1.5;
+}
+
+
+/* ================================================================
+   COURSES
+   ================================================================ */
+
+.courses-info-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.courses-duration,
+.courses-seva-daan {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: rgba(232, 130, 26, 0.08);
+  padding: 10px 24px;
+  border-radius: 100px;
+}
+
+.courses-seva-daan {
+  background: rgba(232, 130, 26, 0.14);
+  color: var(--primary);
+}
+
+.courses-seva-daan strong {
+  font-weight: 700;
+}
+
+.courses-duration i,
+.courses-seva-daan i {
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.course-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px 24px;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.course-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(232, 130, 26, 0.12), rgba(232, 130, 26, 0.04));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+.course-card-title-hi {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.course-card-title-en {
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.78rem;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.course-card-desc {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.course-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.68rem;
+  color: var(--primary);
+  background: rgba(232, 130, 26, 0.08);
+  padding: 5px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+}
+
+.course-card-tag i {
+  font-size: 0.6rem;
+}
+
+.course-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.course-card-price {
+  font-family: var(--font-cinzel), serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.course-enrol-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 20px;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #c96a10);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.course-enrol-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(232, 130, 26, 0.35);
+}
+
+.course-enrol-btn i {
+  font-size: 0.72rem;
 }
 
 
@@ -2169,6 +2461,34 @@ textarea.form-input {
   transform: translateY(-1px);
 }
 
+.form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-success-msg {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border-radius: var(--radius-md, 8px);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.form-error-msg {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border-radius: var(--radius-md, 8px);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
 
 /* ================================================================
    FOOTER
@@ -2283,8 +2603,16 @@ footer {
     columns: 2;
   }
 
-  .trust-counters {
+  .trust-highlights {
     max-width: 400px;
+  }
+
+  .shakti-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2369,8 +2697,20 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .trust-counters {
+  .trust-highlights {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .shakti-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shakti-features {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
   }
 
   .edu-achievement-grid {

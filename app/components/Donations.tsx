@@ -22,9 +22,9 @@ export default function Donations() {
         </p>
         <div className="donation-grid">
           {[
-            { icon: "fa-bowl-rice", amount: "₹501", name: "Anna Daan", desc: "Feeds 20 people at the ashram for one day — the most sacred of all gifts.", featured: false },
-            { icon: "fa-book-open", amount: "₹2,100", name: "Vidya Daan", desc: "Sponsors one month’s education for a girl at Ananda Vidyapeeth — books, uniforms & meals.", featured: true },
-            { icon: "fa-cow", amount: "₹5,100", name: "Go Daan", desc: "Sponsors the care and feed of one cow in our Gaushala for a full year.", featured: false },
+            { icon: "fa-bowl-rice", amount: "₹501", name: "Sadhu Bhojan Seva", desc: "Offer sacred meals to sadhus and saints — the most blessed form of seva.", featured: false },
+            { icon: "fa-book-open", amount: "₹2,100", name: "Shiksha Seva", desc: "Support the sacred cause of education — nurturing young minds with knowledge and values.", featured: true },
+            { icon: "fa-cow", amount: "₹5,100", name: "Gau Seva", desc: "Contribute to the care, protection, and nourishment of Gau Mata.", featured: false },
             { icon: "fa-hand-holding-medical", amount: "₹11,000", name: "Aarogya Seva", desc: "Fully sponsors a free medical camp in a rural village, treating 100+ patients.", featured: false },
           ].map((item) => (
             <div className={`donation-tile${item.featured ? " featured" : ""}`} key={item.name}>

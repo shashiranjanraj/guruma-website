@@ -15,7 +15,7 @@ export default function Social() {
             <div className="platform-header fb-header-bg">
               <span className="platform-header-icon"><i className="fab fa-facebook-f"></i></span>
               <div>
-                <div className="platform-header-name">Sadhvi Jagrit Chetana Giri</div>
+                <div className="platform-header-name">Aacharya Maa Jagrat Chetna Giri</div>
                 <div className="platform-header-meta">4.8M followers · Spiritual Leader</div>
               </div>
             </div>
@@ -24,7 +24,7 @@ export default function Social() {
                 <div className="fb-post-top">
                   <div className="fb-avatar"><i className="fas fa-pray"></i></div>
                   <div>
-                    <div className="fb-post-name">Sadhvi Jagrit Chetana Giri</div>
+                    <div className="fb-post-name">Aacharya Maa Jagrat Chetna Giri</div>
                     <div className="fb-post-time">2 hours ago · &#x1F310;</div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@ export default function Social() {
                 <div className="fb-post-top">
                   <div className="fb-avatar"><i className="fas fa-pray"></i></div>
                   <div>
-                    <div className="fb-post-name">Sadhvi Jagrit Chetana Giri</div>
+                    <div className="fb-post-name">Aacharya Maa Jagrat Chetna Giri</div>
                     <div className="fb-post-time">Yesterday · &#x1F310;</div>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ export default function Social() {
             <div className="platform-header ig-header-bg">
               <span className="platform-header-icon"><i className="fab fa-instagram"></i></span>
               <div>
-                <div className="platform-header-name">@sadhvi_jagrit_chetana_giri</div>
+                <div className="platform-header-name">@aacharya_maa_jagrat_chetna_giri</div>
                 <div className="platform-header-meta">2.1M followers · 1,240 posts</div>
               </div>
             </div>

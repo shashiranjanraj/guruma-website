@@ -13,18 +13,18 @@ export default function Profile() {
       <div className="container">
         <SectionHeader
           eyebrow="Sacred Biography"
-          title="About Sadhvi Ji"
+          title="About Aacharya Maa"
           subtitle="Life, Education, Diksha & the Sacred Guru Parampara"
         />
         <div className="profile-layout">
           <aside className="profile-sidebar">
             <div className="profile-portrait">
               <div className="profile-portrait-img">
-                <img src="/images/profile-portrait.jpg" alt="Acharya Maa Jagrat Chetna Giri" />
+                <img src="/images/profile-portrait.jpg" alt="Aacharya Maa Jagrat Chetna Giri" />
               </div>
               <div className="hairline"></div>
               <div className="profile-portrait-body">
-                <div className="profile-portrait-name">Acharya Maa Jagrat Chetna Giri</div>
+                <div className="profile-portrait-name">Aacharya Maa Jagrat Chetna Giri</div>
                 <div className="profile-portrait-title">Anant Shree 1008 Acharya Mahamandaleshwar</div>
               </div>
               <div className="profile-stats">
@@ -54,8 +54,8 @@ export default function Profile() {
             </div>
 
             <div className={`tab-pane${activeTab === "about" ? " active" : ""}`}>
-              <h3>About Acharya Maa</h3>
-              <p><strong>Anant Shree 1008 Acharya Mahamandaleshwar Acharya Maa Jagrat Chetna Giri</strong> is the President of <strong>Shri Matrishakti Acharya Peeth Seva Trust (Regd.)</strong>, based in Dehradun, Uttarakhand.</p>
+              <h3>About Aacharya Maa</h3>
+              <p><strong>Anant Shree 1008 Acharya Mahamandaleshwar Aacharya Maa Jagrat Chetna Giri</strong> is the President of <strong>Shri Matrishakti Acharya Peeth Seva Trust (Regd.)</strong>, based in Dehradun, Uttarakhand.</p>
               <p>She received her <strong>Sanyas Diksha</strong> on <strong>12 May 2016</strong> at the sacred <em>Simhastha Ujjain Mahakumbh</em> at Mahakaleshwar, under the guidance of her revered Gurudev.</p>
               <p>Having been in the sacred refuge of Gurudev for approximately <strong>16 years</strong>, she has dedicated her life to the path of devotion, seva, and spiritual awakening — serving humanity through the teachings of Sanatan Dharma.</p>
             </div>
@@ -102,7 +102,7 @@ export default function Profile() {
 
             <div className={`tab-pane${activeTab === "diksha" ? " active" : ""}`}>
               <h3>Sanyas Diksha</h3>
-              <p>Acharya Maa Jagrat Chetna Giri received her <strong>Sanyas Diksha</strong> on <strong>12 May 2016</strong> at the auspicious occasion of <em>Simhastha Ujjain Mahakumbh</em> at the sacred <strong>Mahakaleshwar</strong>, Ujjain.</p>
+              <p>Aacharya Maa Jagrat Chetna Giri received her <strong>Sanyas Diksha</strong> on <strong>12 May 2016</strong> at the auspicious occasion of <em>Simhastha Ujjain Mahakumbh</em> at the sacred <strong>Mahakaleshwar</strong>, Ujjain.</p>
               <p>She was initiated into the <strong>Giri Order</strong> of the Dashanami Sannyasa tradition by her revered Gurudev, <em>Yugpurush Shree Swami Parmanand Giri Ji Maharaj</em> of Haridwar.</p>
               <p>Her diksha name <strong>&ldquo;Jagrat Chetna&rdquo;</strong> signifies <em>Awakened Consciousness</em> — the very essence of her spiritual mission and teaching. She wears the traditional <em>Gerua</em> (saffron) robes as a symbol of renunciation and selfless service.</p>
             </div>
@@ -121,7 +121,7 @@ export default function Profile() {
                 <div className="lineage-item" style={{ borderLeftColor: "var(--primary, #E8821A)" }}>
                   <span className="lineage-icon"><i className="fas fa-hands-praying"></i></span>
                   <div>
-                    <div className="lineage-name">Anant Shree 1008 Acharya Mahamandaleshwar Acharya Maa Jagrat Chetna Giri</div>
+                    <div className="lineage-name">Anant Shree 1008 Acharya Mahamandaleshwar Aacharya Maa Jagrat Chetna Giri</div>
                     <div className="lineage-desc">President · Shri Matrishakti Acharya Peeth Seva Trust (Regd.) · Dehradun, Uttarakhand</div>
                   </div>
                 </div>
