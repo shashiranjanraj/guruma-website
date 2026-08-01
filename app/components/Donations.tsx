@@ -37,6 +37,39 @@ export default function Donations() {
           ))}
         </div>
 
+        <div className="festival-donation-section">
+          <h3 className="festival-donation-heading">
+            <i className="fas fa-star"></i>
+            Festival Seva Daan
+            <i className="fas fa-star"></i>
+          </h3>
+          <p className="festival-donation-sub">Offer your seva on auspicious occasions and earn divine blessings</p>
+          <div className="festival-grid">
+            {[
+              { icon: "fa-om", name: "Maha Shivratri Seva", desc: "Rudrabhishek, Bhandara & night-long puja for Lord Mahadev", amount: "₹1,100" },
+              { icon: "fa-fire", name: "Navratri Havan Seva", desc: "Nine nights of Devi aradhana, havan & kanya pujan", amount: "₹2,100" },
+              { icon: "fa-sun", name: "Makar Sankranti Daan", desc: "Til-gur daan, khichdi bhandara & Gau Seva on Sankranti", amount: "₹501" },
+              { icon: "fa-dharmachakra", name: "Guru Purnima Seva", desc: "Honour the Guru Parampara with puja, bhandara & pada pujan", amount: "₹1,100" },
+              { icon: "fa-hands-praying", name: "Diwali Lakshmi Puja", desc: "Lakshmi-Ganesh puja, deep daan & prasad distribution", amount: "₹1,100" },
+              { icon: "fa-water", name: "Ganga Dussehra Seva", desc: "Ganga aarti, deep daan & sacred river puja", amount: "₹501" },
+              { icon: "fa-dove", name: "Ram Navami Seva", desc: "Shri Ram Katha, bhandara & community celebration", amount: "₹1,100" },
+              { icon: "fa-moon", name: "Janmashtami Seva", desc: "Midnight abhishek, bhajan kirtan & makhaan seva for Shri Krishna", amount: "₹1,100" },
+            ].map((item) => (
+              <div className="festival-card" key={item.name}>
+                <div className="festival-card-icon"><i className={`fas ${item.icon}`}></i></div>
+                <div className="festival-card-body">
+                  <div className="festival-card-name">{item.name}</div>
+                  <div className="festival-card-desc">{item.desc}</div>
+                </div>
+                <div className="festival-card-right">
+                  <div className="festival-card-amount">{item.amount}</div>
+                  <button className="festival-donate-btn" onClick={handleDonate}>Donate</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="bank-panel">
           <div className="bank-panel-header">
             <i className="fas fa-university"></i>

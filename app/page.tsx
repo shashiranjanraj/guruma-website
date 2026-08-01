@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import LatestEvents from "./components/LatestEvents";
 import Profile from "./components/Profile";
 import Trust from "./components/Trust";
 import ShaktiPeeth from "./components/ShaktiPeeth";
@@ -19,6 +20,7 @@ export default function Home() {
       <FloatingDiyas />
       <Navbar />
       <Hero />
+      <LatestEvents />
       <Profile />
       <Trust />
       <ShaktiPeeth />

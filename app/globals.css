@@ -769,6 +769,121 @@ section {
 
 
 /* ================================================================
+   LATEST EVENTS
+   ================================================================ */
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.event-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
+}
+
+.event-card-date {
+  width: 64px;
+  height: 72px;
+  background: linear-gradient(135deg, var(--primary), #c96a10);
+  border-radius: var(--radius-md, 8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.event-card-day {
+  font-family: var(--font-cinzel), serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.event-card-month {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+}
+
+.event-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.event-card-tag {
+  display: inline-block;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  background: rgba(232, 130, 26, 0.1);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+
+.event-card-title-hi {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.event-card-title-en {
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+}
+
+.event-card-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.event-card-meta span {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.event-card-meta i {
+  color: var(--primary);
+  font-size: 0.65rem;
+  margin-top: 3px;
+  width: 14px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+
+/* ================================================================
    PROFILE
    ================================================================ */
 .profile-layout {
@@ -1660,6 +1775,126 @@ section {
 .donate-btn:hover {
   box-shadow: 0 4px 24px rgba(232, 130, 26, 0.4);
   transform: translateY(-1px);
+}
+
+/* Festival Donations */
+.festival-donation-section {
+  margin-top: 56px;
+  margin-bottom: 48px;
+}
+
+.festival-donation-heading {
+  font-family: var(--font-cinzel), serif;
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.festival-donation-heading i {
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.festival-donation-sub {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.festival-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.festival-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+}
+
+.festival-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.festival-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(232, 130, 26, 0.14), rgba(232, 130, 26, 0.04));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.festival-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.festival-card-name {
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.festival-card-desc {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.festival-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.festival-card-amount {
+  font-family: var(--font-cinzel), serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.festival-donate-btn {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #c96a10);
+  border: none;
+  padding: 6px 18px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.festival-donate-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(232, 130, 26, 0.35);
 }
 
 /* Bank panel */
@@ -2695,6 +2930,18 @@ footer {
 
   .donation-grid {
     grid-template-columns: 1fr;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .festival-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .festival-card {
+    flex-wrap: wrap;
   }
 
   .trust-highlights {
