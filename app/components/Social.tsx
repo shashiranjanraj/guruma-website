@@ -1,13 +1,18 @@
+"use client";
+
 import SectionHeader from "./SectionHeader";
+import { useLang } from "../i18n/LangContext";
 
 export default function Social() {
+  const { t } = useLang();
+
   return (
     <section id="social" className="bg-parchment">
       <div className="container">
         <SectionHeader
-          eyebrow="Stay Connected"
-          title="Social Media"
-          subtitle="Daily inspiration, satsang updates & divine moments"
+          eyebrow={t("social.eyebrow")}
+          title={t("social.title")}
+          subtitle={t("social.subtitle")}
         />
         <div className="social-layout">
           {/* Facebook */}
@@ -60,7 +65,7 @@ export default function Social() {
               </div>
             </div>
             <div className="platform-footer">
-              <a href="https://www.facebook.com/jagrat.jyoti/" target="_blank" rel="noopener noreferrer" className="platform-follow-btn fb-follow-btn"><i className="fab fa-facebook-f"></i> Follow on Facebook</a>
+              <a href="https://www.facebook.com/jagrat.jyoti/" target="_blank" rel="noopener noreferrer" className="platform-follow-btn fb-follow-btn"><i className="fab fa-facebook-f"></i> {t("social.followFb")}</a>
             </div>
           </div>
 
@@ -95,7 +100,7 @@ export default function Social() {
               <strong>Latest:</strong> &ldquo;The lamp that gives light to others first burns itself — this is the way of the Guru, the Mother, the Devi. &#x1FA94;&rdquo;
             </div>
             <div className="platform-footer">
-              <a href="#" className="platform-follow-btn ig-follow-btn"><i className="fab fa-instagram"></i> Follow on Instagram</a>
+              <a href="#" className="platform-follow-btn ig-follow-btn"><i className="fab fa-instagram"></i> {t("social.followIg")}</a>
             </div>
           </div>
         </div>

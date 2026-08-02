@@ -2,8 +2,10 @@
 
 import { FormEvent, useState } from "react";
 import SectionHeader from "./SectionHeader";
+import { useLang } from "../i18n/LangContext";
 
 export default function Contact() {
+  const { t } = useLang();
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -36,18 +38,18 @@ export default function Contact() {
     <section id="contact" className="bg-dark">
       <div className="container">
         <SectionHeader
-          eyebrow="Connect"
-          title="Contact"
-          subtitle="Reach out to the Trust"
+          eyebrow={t("contact.eyebrow")}
+          title={t("contact.title")}
+          subtitle={t("contact.subtitle")}
           darkOrnament
         />
         <div className="contact-layout">
           <div>
-            <div className="contact-info-title">Get in Touch</div>
+            <div className="contact-info-title">{t("contact.getInTouch")}</div>
             {[
-              { icon: "fa-map-marker-alt", label: "Trust", val: <>Shri Matrishakti Acharya Peeth Seva Trust (Regd.),<br />Dehradun, Uttarakhand</> },
-              { icon: "fa-phone-alt", label: "Phone", val: <>+91 95482 95001</> },
-              { icon: "fa-envelope", label: "Email", val: <>jagratjyoti@gmail.com</> },
+              { icon: "fa-map-marker-alt", label: t("contact.trust"), val: <>Shri Matrishakti Acharya Peeth Seva Trust (Regd.),<br />Dehradun, Uttarakhand</> },
+              { icon: "fa-phone-alt", label: t("contact.phone"), val: <>+91 95482 95001</> },
+              { icon: "fa-envelope", label: t("contact.email"), val: <>jagratjyoti@gmail.com</> },
             ].map((entry) => (
               <div className="contact-entry" key={entry.label}>
                 <div className="contact-entry-icon"><i className={`fas ${entry.icon}`}></i></div>
@@ -70,45 +72,42 @@ export default function Contact() {
           </div>
 
           <div className="contact-form-panel">
-            <div className="contact-form-title">Send a Message</div>
+            <div className="contact-form-title">{t("contact.sendMsg")}</div>
             <form onSubmit={handleSubmit}>
               <input type="hidden" name="subject" value="New message from Shri Matrishakti website" />
               <div className="form-field">
-                <label className="form-label">Your Name</label>
-                <input type="text" name="name" className="form-input" placeholder="Enter your full name" required />
+                <label className="form-label">{t("contact.yourName")}</label>
+                <input type="text" name="name" className="form-input" placeholder={t("contact.namePlaceholder")} required />
               </div>
               <div className="form-field">
-                <label className="form-label">Email Address</label>
+                <label className="form-label">{t("contact.emailLabel")}</label>
                 <input type="email" name="email" className="form-input" placeholder="your@email.com" required />
               </div>
               <div className="form-field">
-                <label className="form-label">Phone Number</label>
+                <label className="form-label">{t("contact.phoneLabel")}</label>
                 <input type="tel" name="phone" className="form-input" placeholder="+91 XXXXX XXXXX" />
               </div>
               <div className="form-field">
-                <label className="form-label">Subject</label>
+                <label className="form-label">{t("contact.subject")}</label>
                 <select name="topic" className="form-input" required defaultValue="">
-                  <option value="" disabled>Select a subject</option>
-                  <option value="Diksha / Initiation Inquiry">Diksha / Initiation Inquiry</option>
-                  <option value="Satsang / Program Schedule">Satsang / Program Schedule</option>
-                  <option value="Donation Receipt Request">Donation Receipt Request</option>
-                  <option value="Ashram Visit / Accommodation">Ashram Visit / Accommodation</option>
-                  <option value="Books & Publications">Books &amp; Publications</option>
-                  <option value="Other">Other</option>
+                  <option value="" disabled>{t("contact.selectSubject")}</option>
+                  {t("contact.subjectOptions").split(",").map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
                 </select>
               </div>
               <div className="form-field">
-                <label className="form-label">Your Message</label>
-                <textarea name="message" className="form-input" placeholder="Jai Guru Maa! Please write your message here…" required></textarea>
+                <label className="form-label">{t("contact.yourMessage")}</label>
+                <textarea name="message" className="form-input" placeholder={t("contact.messagePlaceholder")} required></textarea>
               </div>
               <button type="submit" className="form-submit-btn" disabled={status === "sending"}>
-                {status === "sending" ? "Sending..." : status === "sent" ? "Message Sent!" : "Send Message"}
+                {status === "sending" ? t("contact.sending") : status === "sent" ? t("contact.sent") : t("contact.sendBtn")}
               </button>
               {status === "sent" && (
-                <div className="form-success-msg">Thank you! Your message has been sent to the Trust. Hari Om!</div>
+                <div className="form-success-msg">{t("contact.successMsg")}</div>
               )}
               {status === "error" && (
-                <div className="form-error-msg">Something went wrong. Please try again or contact us directly.</div>
+                <div className="form-error-msg">{t("contact.errorMsg")}</div>
               )}
             </form>
           </div>

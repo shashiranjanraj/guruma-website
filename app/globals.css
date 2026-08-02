@@ -264,6 +264,26 @@ nav {
   display: none;
 }
 
+.lang-toggle {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  background: rgba(232, 130, 26, 0.08);
+  border: 1px solid rgba(232, 130, 26, 0.2);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
+}
+
+.lang-toggle:hover {
+  background: rgba(232, 130, 26, 0.15);
+  border-color: rgba(232, 130, 26, 0.35);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -859,6 +879,201 @@ section {
 @keyframes marqueeScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+
+/* ================================================================
+   PANCHANG
+   ================================================================ */
+
+.panchang-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 48px 0;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.panchang-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(232, 130, 26, 0.15);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.panchang-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 32px;
+  background: rgba(239, 68, 68, 0.06);
+  border-radius: var(--radius-xl);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+
+.panchang-date-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  flex-wrap: wrap;
+}
+
+.panchang-date-day {
+  font-family: var(--font-cinzel), serif;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.panchang-date-sep {
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.panchang-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.panchang-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: var(--radius-xl);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-soft);
+}
+
+.panchang-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(232, 130, 26, 0.1);
+}
+
+.panchang-card--highlight {
+  border-color: rgba(232, 130, 26, 0.2);
+  background: linear-gradient(135deg, rgba(232, 130, 26, 0.04), var(--bg-card));
+}
+
+.panchang-card-icon {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+
+.panchang-card-label {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.panchang-card-value {
+  font-family: var(--font-cinzel), serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.panchang-card-sub {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.panchang-timings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.panchang-time-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+.panchang-time-card--rahu {
+  border-color: rgba(220, 38, 38, 0.12);
+  background: rgba(220, 38, 38, 0.03);
+}
+
+.panchang-time-icon {
+  font-size: 1.1rem;
+  color: var(--primary);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(232, 130, 26, 0.08);
+  flex-shrink: 0;
+}
+
+.panchang-time-icon.sunrise {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.panchang-time-icon.sunset {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.panchang-time-icon.rahu {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+}
+
+.panchang-time-label {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.panchang-time-value {
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 
@@ -2835,6 +3050,10 @@ footer {
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .panchang-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -2949,6 +3168,14 @@ footer {
   }
 
   .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panchang-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panchang-timings {
     grid-template-columns: 1fr;
   }
 

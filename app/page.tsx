@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import LatestEvents from "./components/LatestEvents";
+import Panchang from "./components/Panchang";
 import Profile from "./components/Profile";
 import Trust from "./components/Trust";
 import ShaktiPeeth from "./components/ShaktiPeeth";
@@ -13,14 +14,16 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollAnimations from "./components/ScrollAnimations";
 import FloatingDiyas from "./components/FloatingDiyas";
+import { LangProvider } from "./i18n/LangContext";
 
 export default function Home() {
   return (
-    <>
+    <LangProvider>
       <FloatingDiyas />
       <Navbar />
       <Hero />
       <LatestEvents />
+      <Panchang />
       <Profile />
       <Trust />
       <ShaktiPeeth />
@@ -33,6 +36,6 @@ export default function Home() {
       <Footer />
       <a href="#home" className="back-to-top" title="Back to top">&#x0950;</a>
       <ScrollAnimations />
-    </>
+    </LangProvider>
   );
 }

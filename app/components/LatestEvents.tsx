@@ -1,3 +1,7 @@
+"use client";
+
+import { useLang } from "../i18n/LangContext";
+
 const events = [
   "श्रावण मास शिव महापुराण कथा — 15 Aug, Dehradun",
   "श्री कृष्ण जन्माष्टमी महोत्सव — 26 Aug, Dehradun",
@@ -6,13 +10,14 @@ const events = [
 ];
 
 export default function LatestEvents() {
+  const { t } = useLang();
   const items = [...events, ...events];
 
   return (
     <div className="marquee-strip">
       <div className="marquee-label">
         <i className="fas fa-om"></i>
-        <span>Latest Events</span>
+        <span>{t("marquee.label")}</span>
       </div>
       <div className="marquee-track">
         <div className="marquee-content">

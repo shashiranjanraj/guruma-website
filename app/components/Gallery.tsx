@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionHeader from "./SectionHeader";
+import { useLang } from "../i18n/LangContext";
 
 type Category = "all" | "guru" | "ashram" | "events";
 
@@ -17,23 +18,24 @@ const galleryItems = [
   { src: "/images/slider-garden.jpg", alt: "In the Garden", cat: "ashram", caption: "Peaceful moments in nature" },
 ];
 
-const categories: { id: Category; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "guru", label: "Guru Parampara" },
-  { id: "ashram", label: "Ashram" },
-  { id: "events", label: "Events" },
-];
-
 export default function Gallery() {
+  const { t } = useLang();
   const [filter, setFilter] = useState<Category>("all");
+
+  const categories: { id: Category; label: string }[] = [
+    { id: "all", label: t("gallery.all") },
+    { id: "guru", label: t("gallery.guruParampara") },
+    { id: "ashram", label: t("gallery.ashram") },
+    { id: "events", label: t("gallery.events") },
+  ];
 
   return (
     <section id="gallery" className="bg-parchment">
       <div className="container">
         <SectionHeader
-          eyebrow="Visual Memories"
-          title="Photo Gallery"
-          subtitle="Moments of grace, devotion & seva"
+          eyebrow={t("gallery.eyebrow")}
+          title={t("gallery.title")}
+          subtitle={t("gallery.subtitle")}
         />
         <div className="gallery-filter-bar">
           {categories.map((cat) => (

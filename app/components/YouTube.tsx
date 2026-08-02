@@ -1,4 +1,7 @@
+"use client";
+
 import SectionHeader from "./SectionHeader";
+import { useLang } from "../i18n/LangContext";
 
 const videos = [
   { bg: "linear-gradient(135deg,#1a0533,#4a1060)", dur: "1:24:36", title: "Bhagavad Gita Chapter 12 — Bhakti Yoga: The Path of Devotion | Full Discourse", views: "458K views", ago: "3 weeks ago" },
@@ -10,13 +13,15 @@ const videos = [
 ];
 
 export default function YouTube() {
+  const { t } = useLang();
+
   return (
     <section id="youtube" className="bg-ivory">
       <div className="container">
         <SectionHeader
-          eyebrow="Discourses & Bhajans"
-          title="YouTube Channel"
-          subtitle="Teachings, guided meditations & spiritual discourses"
+          eyebrow={t("yt.eyebrow")}
+          title={t("yt.title")}
+          subtitle={t("yt.subtitle")}
         />
         <div className="yt-channel-strip">
           <i className="fab fa-youtube yt-icon"></i>
@@ -24,7 +29,7 @@ export default function YouTube() {
             <div className="yt-channel-name">Aacharya Maa Jagrat Chetna Giri</div>
             <div className="yt-channel-meta">Satsang, Gita discourses &amp; guided meditation</div>
           </div>
-          <a href="https://www.youtube.com/@SadhviJagratChetna-nq1rb" target="_blank" rel="noopener noreferrer" className="yt-sub-btn"><i className="fab fa-youtube"></i> Subscribe</a>
+          <a href="https://www.youtube.com/@SadhviJagratChetna-nq1rb" target="_blank" rel="noopener noreferrer" className="yt-sub-btn"><i className="fab fa-youtube"></i> {t("yt.subscribe")}</a>
         </div>
         <div className="yt-channel-strip" style={{ marginTop: "12px" }}>
           <i className="fab fa-youtube yt-icon"></i>
@@ -32,7 +37,7 @@ export default function YouTube() {
             <div className="yt-channel-name">आचार्य साध्वी जाग्रत चेतना</div>
             <div className="yt-channel-meta">Hindi Channel · Spiritual discourses &amp; bhajans</div>
           </div>
-          <a href="https://youtube.com/channel/UCkOll0DdkvO0rlZAk7NkTgw" target="_blank" rel="noopener noreferrer" className="yt-sub-btn"><i className="fab fa-youtube"></i> Subscribe</a>
+          <a href="https://youtube.com/channel/UCkOll0DdkvO0rlZAk7NkTgw" target="_blank" rel="noopener noreferrer" className="yt-sub-btn"><i className="fab fa-youtube"></i> {t("yt.subscribe")}</a>
         </div>
         <div className="yt-grid">
           {videos.map((v) => (
