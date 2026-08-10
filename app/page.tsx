@@ -23,12 +23,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <LatestEvents />
+      <Donations />
       <Panchang />
       <Profile />
       <Trust />
       <ShaktiPeeth />
       <Courses />
-      <Donations />
       <Gallery />
       <YouTube />
       <Social />

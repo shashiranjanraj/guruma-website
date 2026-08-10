@@ -79,12 +79,16 @@ const translations: Record<string, Record<string, string>> = {
     "trust.eyebrow": "Institutional Service",
     "trust.title": "Shri Matrishakti Acharya Peeth Seva Trust",
     "trust.subtitle":
-      "Serving humanity as a form of worship since 1995",
+      "Serving humanity as a form of worship · Regd. No. 186/2025 · Dehradun, Uttarakhand",
     "trust.aboutHeading": "About the Trust",
     "trust.aboutP1":
-      'The <strong>Shri Matrishakti Acharya Peeth Seva Trust</strong> was founded with the vision of uniting spiritual wisdom with practical service. The Trust operates on the principle: <em>"Atma Seva is Lok Seva."</em>',
+      'The <strong>Shri Matrishakti Acharya Peeth Seva Trust</strong> (Registration No: <strong>186/2025</strong> · Date of Reg: <strong>02/04/2025</strong> · Dehradun, Uttarakhand) was founded with the vision of uniting spiritual wisdom with practical service. The Trust operates on the principle: <em>"Atma Seva is Lok Seva."</em>',
     "trust.aboutP2":
       "Guided by the spirit of devotion and selfless action, the Trust strives to serve society through spiritual awakening, Go-Seva, and the timeless values of Sanatan Dharma.",
+    "trust.regNoLabel": "Reg. No.",
+    "trust.regDateLabel": "Date of Reg.",
+    "trust.regPlaceLabel": "Location",
+    "trust.regLocation": "Dehradun, Uttarakhand",
     "trust.sevaItems":
       "Seva & Sadhana:|Devoted to selfless service as a path to spiritual growth and inner awakening,Go-Seva:|Caring for and protecting cows as a sacred expression of compassion,Spiritual Discourses:|Sharing the timeless wisdom of Sanatan Dharma through satsang and pravachan,Community Welfare:|Uplifting communities through acts of kindness charity and devotion,Satsang & Bhajan:|Nurturing devotion through regular gatherings of prayer kirtan and meditation",
     "trust.highlights":
@@ -141,6 +145,8 @@ const translations: Record<string, Record<string, string>> = {
       "Account Name,Account Number,IFSC Code,Bank & Branch,PAN Number,Phone",
     "donations.scanToDonate": "Scan to Donate via UPI",
     "donations.donateBtn": "Donate",
+    "donations.copiedAlert": "Bank Details copied to clipboard! 🙏",
+    "donations.copyBtn": "Copy Details",
 
     // Gallery
     "gallery.eyebrow": "Visual Memories",
@@ -198,15 +204,21 @@ const translations: Record<string, Record<string, string>> = {
     "footer.name":
       "Shri Matrishakti Acharya Peeth Seva Trust · Dehradun, Uttarakhand",
     "footer.regInfo":
-      "Reg. No. DL/1995/0047824 · 80G Registered · FCRA Approved",
+      "Reg. No. 186/2025 · Reg. Date: 02/04/2025 · Dehradun, Uttarakhand · 80G Registered · FCRA Approved",
     "footer.quote":
       "सेवा ही सबसे बड़ी पूजा है — Service is the highest worship",
     "footer.copyright":
       "© 2025 Shri Matrishakti Acharya Peeth Seva Trust",
 
+    // Hero
+    "hero.greeting": "जय गुरुदेव",
+    "hero.subtitle": "Vedanta · Bhakti Yoga · Selfless Service",
+    "hero.ctaWatch": "Listen to Pravachans",
+    "hero.ctaDonate": "Support Seva",
+
     // Marquee
     "marquee.label": "Latest Events",
-
+    
     // Lang toggle
     "lang.switchTo": "हिन्दी",
   },
@@ -312,13 +324,21 @@ const translations: Record<string, Record<string, string>> = {
     "trust.title":
       "श्री मातृशक्ति आचार्य पीठ सेवा ट्रस्ट",
     "trust.subtitle":
-      "1995 से मानव सेवा को पूजा मानते हुए",
+      "मानव सेवा को ईश्वर की पूजा मानते हुए · रजि. सं. 186/2025 · देहरादून, उत्तराखण्ड",
     "trust.aboutHeading":
       "ट्रस्ट के बारे में",
     "trust.aboutP1":
-      '<strong>श्री मातृशक्ति आचार्य पीठ सेवा ट्रस्ट</strong> की स्थापना आध्यात्मिक ज्ञान को व्यावहारिक सेवा से जोड़ने के उद्देश्य से की गई। ट्रस्ट इस सिद्धान्त पर कार्य करता है: <em>"आत्म सेवा ही लोक सेवा है।"</em>',
+      '<strong>श्री मातृशक्ति आचार्य पीठ सेवा ट्रस्ट</strong> (पंजीकरण संख्या: <strong>186/2025</strong> · पंजीकरण तिथि: <strong>02/04/2025</strong> · देहरादून, उत्तराखण्ड) की स्थापना आध्यात्मिक ज्ञान को व्यावहारिक सेवा से जोड़ने के उद्देश्य से की गई। ट्रस्ट इस सिद्धान्त पर कार्य करता है: <em>"आत्म सेवा ही लोक सेवा है।"</em>',
     "trust.aboutP2":
       "भक्ति और निःस्वार्थ सेवा की भावना से प्रेरित होकर, ट्रस्ट आध्यात्मिक जागरण, गो-सेवा और सनातन धर्म के शाश्वत मूल्यों के माध्यम से समाज की सेवा करता है।",
+    "trust.regNoLabel":
+      "पंजीकरण संख्या",
+    "trust.regDateLabel":
+      "पंजीकरण तिथि",
+    "trust.regPlaceLabel":
+      "स्थान",
+    "trust.regLocation":
+      "देहरादून, उत्तराखण्ड",
     "trust.sevaItems":
       "सेवा एवं साधना:|निःस्वार्थ सेवा को आध्यात्मिक विकास और आन्तरिक जागरण का मार्ग मानना,गो-सेवा:|करुणा की पवित्र अभिव्यक्ति के रूप में गौ माता की देखभाल और सुरक्षा,आध्यात्मिक प्रवचन:|सत्संग और प्रवचन के माध्यम से सनातन धर्म के शाश्वत ज्ञान का प्रसार,सामुदायिक कल्याण:|दया भक्ति और सेवा के कार्यों से समुदायों का उत्थान,सत्संग एवं भजन:|प्रार्थना कीर्तन और ध्यान की नियमित सभाओं से भक्ति का पोषण",
     "trust.highlights":
@@ -393,6 +413,10 @@ const translations: Record<string, Record<string, string>> = {
       "UPI से दान के लिए स्कैन करें",
     "donations.donateBtn":
       "दान करें",
+    "donations.copiedAlert":
+      "बैंक विवरण क्लिपबोर्ड पर कॉपी किया गया! 🙏",
+    "donations.copyBtn":
+      "विवरण कॉपी करें",
 
     // Gallery
     "gallery.eyebrow":
@@ -475,11 +499,17 @@ const translations: Record<string, Record<string, string>> = {
     "footer.name":
       "श्री मातृशक्ति आचार्य पीठ सेवा ट्रस्ट · देहरादून, उत्तराखण्ड",
     "footer.regInfo":
-      "रजि. सं. DL/1995/0047824 · 80G पंजीकृत · FCRA स्वीकृत",
+      "रजि. सं. 186/2025 · पंजीकरण तिथि: 02/04/2025 · देहरादून, उत्तराखण्ड · 80G पंजीकृत · FCRA स्वीकृत",
     "footer.quote":
       "सेवा ही सबसे बड़ी पूजा है — Service is the highest worship",
     "footer.copyright":
       "© 2025 श्री मातृशक्ति आचार्य पीठ सेवा ट्रस्ट",
+
+    // Hero
+    "hero.greeting": "जय गुरुदेव",
+    "hero.subtitle": "वेदांत · भक्ति योग · निष्काम सेवा",
+    "hero.ctaWatch": "प्रवचन सुनें",
+    "hero.ctaDonate": "सेवा सहयोग",
 
     // Marquee
     "marquee.label":

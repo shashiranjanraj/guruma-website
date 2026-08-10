@@ -22,6 +22,22 @@ export default function Trust() {
             <h3>{t("trust.aboutHeading")}</h3>
             <p dangerouslySetInnerHTML={{ __html: t("trust.aboutP1") }} />
             <p>{t("trust.aboutP2")}</p>
+
+            <div className="trust-reg-card">
+              <div className="trust-reg-item">
+                <i className="fas fa-certificate"></i>
+                <span><strong>{t("trust.regNoLabel")}:</strong> 186/2025</span>
+              </div>
+              <div className="trust-reg-item">
+                <i className="fas fa-calendar-check"></i>
+                <span><strong>{t("trust.regDateLabel")}:</strong> 02/04/2025</span>
+              </div>
+              <div className="trust-reg-item">
+                <i className="fas fa-map-marker-alt"></i>
+                <span><strong>{t("trust.regPlaceLabel")}:</strong> {t("trust.regLocation")}</span>
+              </div>
+            </div>
+
             <ul className="trust-list">
               {t("trust.sevaItems").split(",").map((item) => {
                 const [label, desc] = item.split("|");

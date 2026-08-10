@@ -5,8 +5,15 @@ import { useLang } from "../i18n/LangContext";
 
 export default function Donations() {
   const { t } = useLang();
+  
   const handleDonate = () => {
     alert("🏦 Bank Transfer Details\n\nAccount Name: Shri Matrishakti Acharya Peeth Seva Trust\nAccount No: 4694000100063726\nIFSC Code: PNUB0469400\nBank: Punjab National Bank, Dehradun\nPAN: ABLTS9908H\n\n📱 UPI: 9548295001m@pnb\nPhone: 9548295001\n\n🙏 Hari Om Tat Sat");
+  };
+
+  const handleCopyDetails = () => {
+    const text = `🏦 Bank Transfer Details\n\nAccount Name: Shri Matrishakti Acharya Peeth Seva Trust\nAccount No: 4694000100063726\nIFSC Code: PNUB0469400\nBank: Punjab National Bank, Dehradun\nPAN: ABLTS9908H\n\n📱 UPI: 9548295001m@pnb\nPhone: 9548295001\n\n🙏 Hari Om Tat Sat`;
+    navigator.clipboard.writeText(text);
+    alert(t("donations.copiedAlert"));
   };
 
   return (
@@ -25,9 +32,9 @@ export default function Donations() {
         <div className="donation-grid">
           {t("donations.items").split(",").map((entry, idx) => {
             const [name, desc] = entry.split("|");
-            const icons = ["fa-bowl-rice","fa-book-open","fa-cow","fa-hand-holding-medical"];
-            const amounts = ["₹501","₹2,100","₹5,100","₹11,000"];
-            const featured = [false,true,false,false];
+            const icons = ["fa-bowl-rice", "fa-book-open", "fa-cow", "fa-hand-holding-medical"];
+            const amounts = ["₹501", "₹2,100", "₹5,100", "₹11,000"];
+            const featured = [false, true, false, false];
             return (
               <div className={`donation-tile${featured[idx] ? " featured" : ""}`} key={name}>
                 <span className="donation-tile-icon"><i className={`fas ${icons[idx]}`}></i></span>
@@ -50,8 +57,8 @@ export default function Donations() {
           <div className="festival-grid">
             {t("donations.festivalItems").split(",").map((entry, idx) => {
               const [name, desc] = entry.split("|");
-              const icons = ["fa-om","fa-fire","fa-sun","fa-dharmachakra","fa-hands-praying","fa-water","fa-dove","fa-moon"];
-              const amounts = ["₹1,100","₹2,100","₹501","₹1,100","₹1,100","₹501","₹1,100","₹1,100"];
+              const icons = ["fa-om", "fa-fire", "fa-sun", "fa-dharmachakra", "fa-hands-praying", "fa-water", "fa-dove", "fa-moon"];
+              const amounts = ["₹1,100", "₹2,100", "₹501", "₹1,100", "₹1,100", "₹501", "₹1,100", "₹1,100"];
               return (
                 <div className="festival-card" key={name}>
                   <div className="festival-card-icon"><i className={`fas ${icons[idx]}`}></i></div>
@@ -71,8 +78,14 @@ export default function Donations() {
 
         <div className="bank-panel">
           <div className="bank-panel-header">
-            <i className="fas fa-university"></i>
-            <span>{t("donations.bankTitle")}</span>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+              <i className="fas fa-university"></i>
+              <span>{t("donations.bankTitle")}</span>
+            </div>
+            <button className="bank-copy-btn" onClick={handleCopyDetails}>
+              <i className="fas fa-copy"></i>
+              <span>{t("donations.copyBtn")}</span>
+            </button>
           </div>
           <div className="bank-panel-body">
             {(() => {
