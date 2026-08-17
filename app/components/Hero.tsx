@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { useLang } from "../i18n/LangContext";
 
 const slides = [
   { src: "/images/hero-portrait.jpg", alt: "Aacharya Maa Jagrat Chetna Giri -- Portrait", position: "center 38%" },
@@ -14,7 +13,6 @@ const slides = [
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const { t } = useLang();
 
   const goTo = useCallback((idx: number) => {
     setCurrent((idx + slides.length) % slides.length);
@@ -51,43 +49,7 @@ export default function Hero() {
         <div className="hero-slide-overlay" />
       </div>
 
-      {/* Floating Glassmorphic Content Card */}
-      <div className="hero-slider-content hero-slider-content--split">
-        <div className="hero-content-left">
-          <div className="hero-greeting-badge">
-            <span className="hero-greeting-line"></span>
-            <span className="hero-greeting-text">{t("hero.greeting")}</span>
-            <span className="hero-greeting-line"></span>
-          </div>
-          <h1 className="hero-title">{t("nav.brandTitle")}</h1>
-          <div className="hero-ornament-center">
-            <span className="ornament-line"></span>
-            <span className="ornament-glyph">&#x0950;</span>
-            <span className="ornament-line"></span>
-          </div>
-          <p className="hero-subtitle">{t("hero.subtitle")}</p>
-          <div className="hero-actions">
-            <a href="#youtube" className="hero-btn hero-btn--primary">
-              <i className="fab fa-youtube"></i>
-              <span>{t("hero.ctaWatch")}</span>
-            </a>
-            <a href="#donations" className="hero-btn hero-btn--secondary">
-              <i className="fas fa-hand-holding-heart"></i>
-              <span>{t("hero.ctaDonate")}</span>
-            </a>
-          </div>
-        </div>
 
-        <div className="hero-content-right">
-          <div className="hero-qr-card">
-            <div className="hero-qr-title">{t("donations.scanToDonate")}</div>
-            <div className="hero-qr-frame">
-              <img src="/images/donation-qr.jpg" alt="UPI QR Code - Shri Matrishakti Acharya Peeth Seva Trust" />
-            </div>
-            <div className="hero-qr-upi">UPI: 9548295001m@pnb</div>
-          </div>
-        </div>
-      </div>
 
       {/* Navigation arrows */}
       <button
