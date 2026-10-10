@@ -41,7 +41,12 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.shrimatrishakti.com"),
-  title: "जय गुरुदेव",
+  title: {
+    default: "Aacharya Maa Jagrat Chetna Giri | Shri Matrishakti Acharya Peeth Seva Trust, Dehradun",
+    template: "%s | Aacharya Maa Jagrat Chetna Giri",
+  },
+  applicationName: "Shri Matrishakti Acharya Peeth Seva Trust",
+  alternates: { canonical: "/" },
   description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover the teachings, Vedanta discourses, Bhakti Yoga Satsangs, and humanitarian initiatives led by Aacharya Maa Jagrat Chetna Giri in Dehradun, Uttarakhand.",
   keywords: [
     "Aacharya Maa Jagrat Chetna Giri",
@@ -56,29 +61,26 @@ export const metadata: Metadata = {
     "Sanskrit and Vedanta",
     "Go Seva Gaushala",
     "Spiritual Discourse",
-    "Bhakti Yoga Seva"
+    "Bhakti Yoga Seva",
+    "जाग्रत चेतना गिरी",
+    "आचार्य माँ जाग्रत चेतना गिरी",
+    "श्री मातृशक्ति आचार्य पीठ सेवा ट्रस्ट",
+    "देहरादून आश्रम",
+    "वेदांत प्रवचन",
+    "गौ सेवा"
   ],
   openGraph: {
-    title: "जय गुरुदेव",
+    title: "Aacharya Maa Jagrat Chetna Giri | जय गुरुदेव",
     description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover spiritual discourses, Vedanta classes, and charitable services.",
     url: "https://www.shrimatrishakti.com",
     siteName: "Aacharya Maa Jagrat Chetna Giri",
-    images: [
-      {
-        url: "/images/hero-portrait.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Aacharya Maa Jagrat Chetna Giri -- Portrait",
-      },
-    ],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aacharya Maa Jagrat Chetna Giri",
+    title: "Aacharya Maa Jagrat Chetna Giri | जय गुरुदेव",
     description: "Official portal of Shri Matrishakti Acharya Peeth Seva Trust. Discover spiritual discourses and charitable services.",
-    images: ["/images/hero-portrait.jpg"],
   },
   robots: {
     index: true,
@@ -93,6 +95,50 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.shrimatrishakti.com/#website",
+      url: "https://www.shrimatrishakti.com",
+      name: "Shri Matrishakti Acharya Peeth Seva Trust",
+      inLanguage: ["hi", "en"],
+    },
+    {
+      "@type": "NGO",
+      "@id": "https://www.shrimatrishakti.com/#organization",
+      name: "Shri Matrishakti Acharya Peeth Seva Trust",
+      url: "https://www.shrimatrishakti.com",
+      logo: "https://www.shrimatrishakti.com/icon.svg",
+      image: "https://www.shrimatrishakti.com/images/hero-portrait.jpg",
+      email: "jagratjyoti@gmail.com",
+      telephone: "+91-95482-95001",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dehradun",
+        addressRegion: "Uttarakhand",
+        addressCountry: "IN",
+      },
+      founder: { "@id": "https://www.shrimatrishakti.com/#person" },
+      sameAs: [
+        "https://www.facebook.com/jagrat.jyoti/",
+        "https://www.youtube.com/@SadhviJagratChetna-nq1rb",
+      ],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.shrimatrishakti.com/#person",
+      name: "Aacharya Maa Jagrat Chetna Giri",
+      alternateName: "Acharya Maa Jagrat Chetna Giri",
+      jobTitle: "Acharya Mahamandaleshwar",
+      image: "https://www.shrimatrishakti.com/images/profile-portrait.jpg",
+      url: "https://www.shrimatrishakti.com",
+      worksFor: { "@id": "https://www.shrimatrishakti.com/#organization" },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -100,7 +146,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="hi"
       className={`${cinzel.variable} ${cinzelDecorative.variable} ${ebGaramond.variable} ${cormorantGaramond.variable} ${poppins.variable}`}
     >
       <head>
@@ -109,7 +155,13 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

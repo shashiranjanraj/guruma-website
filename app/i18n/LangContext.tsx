@@ -39,6 +39,10 @@ export function LangProvider({ children }: { children: ReactNode }) {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   const toggleLang = useCallback(() => {
     setLang((prev) => {
       const next: Lang = prev === "en" ? "hi" : "en";

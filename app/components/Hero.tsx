@@ -31,6 +31,10 @@ export default function Hero() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
+      <h1 className="sr-only">
+        Aacharya Maa Jagrat Chetna Giri — Shri Matrishakti Acharya Peeth Seva Trust, Dehradun
+      </h1>
+
       {/* Slides */}
       <div className="hero-slider-track">
         {slides.map((slide, i) => (
@@ -42,6 +46,8 @@ export default function Hero() {
               src={slide.src}
               alt={slide.alt}
               draggable={false}
+              loading={i === 0 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "auto"}
               style={{ objectPosition: slide.position || "center 20%" }}
             />
           </div>
